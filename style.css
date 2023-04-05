@@ -1,0 +1,96 @@
+.gamecontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+.square {
+	border: 1px solid black;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.square:hover {
+	background-color: #eee;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .modal h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal p {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .modal button {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .overlay.show, .modal.show {
+    display: block;
+  }
+  .happy{
+    display: none;
+    color: #4caf50;
+    font-size: 80px;
+    text-align: center;
+  }
+  .sad{
+    display: none;
+    color: red;
+    font-size: 80px;
+    text-align: center;
+  }
+  .title{
+    text-align: center;
+    color: blue;
+  }
